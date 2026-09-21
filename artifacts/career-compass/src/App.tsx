@@ -1067,8 +1067,8 @@ function Detail() {
 
 function Router() {
   return (
-    <Shell>
-      <WouterRouter base="/career-compass">
+    <WouterRouter base="/career-compass">
+      <Shell>
         <ErrorBoundary resetKey={window.location.pathname}>
           <Switch>
             <Route path="/" component={Dashboard} />
@@ -1079,8 +1079,8 @@ function Router() {
             <Route component={NotFound} />
           </Switch>
         </ErrorBoundary>
-      </WouterRouter>
-    </Shell>
+      </Shell>
+    </WouterRouter>
   );
 }
 
