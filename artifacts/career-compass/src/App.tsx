@@ -15,6 +15,7 @@ import {
   useLocation,
   useParams,
 } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -1067,9 +1068,9 @@ function Detail() {
 
 function Router() {
   return (
-    <WouterRouter base="/career-compass">
+    <WouterRouter hook={useHashLocation}>
       <Shell>
-        <ErrorBoundary resetKey={window.location.pathname}>
+        <ErrorBoundary resetKey={window.location.hash}>
           <Switch>
             <Route path="/" component={Dashboard} />
             <Route path="/dashboard" component={Dashboard} />
